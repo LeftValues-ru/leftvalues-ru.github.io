@@ -997,7 +997,7 @@ questions = [
             "g": 0
         }
     },
-    //conservative vs progressive
+    //консерватизм против прогрессивизма
     {
         "question": "The oppression of LGBTQ+ people is a major issue that needs to be seriously addressed.",
         "i18n": {
