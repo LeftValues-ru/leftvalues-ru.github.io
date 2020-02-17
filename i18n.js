@@ -83,7 +83,7 @@ const i18n = {
     "quiz-question-of": {
         en(qn, questions) {return `Question ${qn + 1} of ${questions.length}`},
         de(qn, questions) {return `Frage ${qn +1} von ${questions.length}`},
-        ko(qn, questions) {return `${questions.length}개 질문 중 ${qn +1} 번째`}
+        ru(qn, questions) {return `Вопрос ${qn + 1} из ${questions.length}`},
     },
     // instructions.html
     "inst-h2": {
