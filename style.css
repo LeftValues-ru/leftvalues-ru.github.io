@@ -20,7 +20,7 @@ p {
     line-height: 1;
     margin: 4pt;
 }
-body.__i18n-ko p {
+body.__i18n-ru p {
     line-height: 140%
 }
 p.value-description {
@@ -62,7 +62,7 @@ h2 {
     margin-top: 12pt;
     margin-bottom: 0pt;
 }
-body.__i18n-ko h2 {
+body.__i18n-ru h2 {
     line-height: 120%;
     margin-top: 0.5em
 }
