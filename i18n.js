@@ -165,7 +165,7 @@ const i18n = {
     "result-e-label": {
         "en": ["Extremely Partisan","Very Partisan","Partisan","Neutral","Unionist","Very Unionist","Extremely Unionist"],
         "de": ["Extrem Parteiisch", "Sehr Parteiisch", "Parteiisch", "Neutral", "Gewerkschaftlich", "Sehr Gewerkschaftlich", "Extrem Gewerkschaftlich"],
-        "ru": ["Крайне Партийный","Очень Партийный","Партийный","Нейтральный","Юнионистский","Очень Юнионистский","Крайне Юнионистский"]
+        "ru": ["Крайне Партийный","Очень Партийный","Партийный","Нейтральный","Профсоюзный","Очень Профсоюзный","Крайне Профсоюзный"]
     },
     "result-f-label": {
         "en": ["Extremely Productivist","Very Productivist","Productivist","Neutral","Ecological","Very Ecological","Extremely Ecological"],
