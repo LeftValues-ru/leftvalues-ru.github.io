@@ -519,7 +519,7 @@ questions = [
         "question": "The global socialist movement should be led by a single party or organization.",
         "i18n": {
             "de": "Die globale sozialistische Bewegung sollte von einer einzigen Partei oder Organisation geführt werden.",
-            "ru": " Глобальное социалистическое движение должно возглавляться одной партией или организацией."
+            "ru": "Глобальное социалистическое движение должно возглавляться одной партией или организацией."
         },
         "effect": {
             "a": 0,
