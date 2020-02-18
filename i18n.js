@@ -73,12 +73,12 @@ const i18n = {
     "quiz-strongly-disagree": {
         "en": "Strongly Disagree",
         "de": "Stimme überhaupt nicht zu",
-        "ru": "полностью не согласен"
+        "ru": "Полностью не согласен"
     },
     "quiz-back": {
         "de": "back",
         "de": "Zurück",
-        "ru": "Предыдущий вопрос"
+        "ru": "Назад"
     },
     "quiz-question-of": {
         en(qn, questions) {return `Question ${qn + 1} of ${questions.length}`},
