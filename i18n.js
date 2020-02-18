@@ -27,7 +27,7 @@ const languages = [
         "code": "de"
     },
     {
-        "name": "russian",
+        "name": "русский",
         "code": "ru"
     }
 ]
