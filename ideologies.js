@@ -274,5 +274,28 @@ ideologies = [
 			"f": 50,
 			"g": 30
         }
+    },
+	{
+        "name": "Left-Wing Nationalism",
+		"desc": "Left-Wing Nationalism is an ideology that mixes left-wing economics with non-xenophobic nationalism and patriotism. Many Left-Wing Nationalists are simultaneously supportive of international solidarity, and may be supportive of armed struggle.",
+        "i18n": {
+            "de": {
+                "name": "Linksnationalismus",
+                "desc": "Der Linksnationalismus ist eine Ideologie, die die linke Wirtschaft mit nicht fremdenfeindlichem Nationalismus und Patriotismus verbindet. Viele linke Nationalisten unterstützen gleichzeitig die internationale Solidarität und möglicherweise den bewaffneten Kampf."
+            },
+	    "ru": {
+                "name": "Левый национализм",
+                "desc": "Левый национализм — это идеология, которая смешивает левую экономику с нексенофобским национализмом и патриотизмом. Многие левые националисты одновременно поддерживают международную солидарность, и могут поддерживать вооружённую борьбу."
+            }
+        },
+        "stats": {
+            "a": 60,
+            "b": 60,
+            "c": 60,
+            "d": 30,
+			"e": 70,
+			"f": 40,
+			"g": 30
+        }
     }
 ];
