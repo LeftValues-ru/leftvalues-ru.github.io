@@ -4,10 +4,10 @@ questions = [
         "question": "Reforming capitalist society to achieve better rights for workers is desirable.",
         "i18n": {
             "de": "Es ist wünschenswert, die kapitalistische Gesellschaft zu reformieren, um bessere Rechte für die Arbeitnehmer zu erreichen.",
-            "ru": "Желательно реформировать капиталистическое общество, чтобы добиться лучших прав трудящихся."
+            "ru": "Желательно прийти к социализму путём постепенного реформирования капиталистического общества, чтобы добиться лучших прав трудящихся."
         },
         "effect": {
-            "a": -5,
+            "a": -10,
             "b": 0,
             "c": 0,
             "d": 0,
@@ -39,7 +39,7 @@ questions = [
             "ru": "Негативные последствия революции, как правило, перевешивают её преимущества."
         },
         "effect": {
-            "a": -10,
+            "a": -5,
             "b": 0,
             "c": 0,
             "d": 0,
@@ -217,7 +217,7 @@ questions = [
         },
         "effect": {
             "a": 0,
-            "b": 5,
+            "b": 10,
             "c": 0,
             "d": 0,
             "e": 0,
@@ -249,7 +249,7 @@ questions = [
         },
         "effect": {
             "a": 0,
-            "b": 5,
+            "b": 10,
             "c": 0,
             "d": 0,
             "e": 0,
@@ -297,7 +297,7 @@ questions = [
         },
         "effect": {
             "a": 0,
-            "b": -10,
+            "b": -5,
             "c": 0,
             "d": 0,
             "e": 0,
@@ -313,7 +313,7 @@ questions = [
         },
         "effect": {
             "a": 0,
-            "b": -10,
+            "b": -5,
             "c": 0,
             "d": 0,
             "e": 0,
@@ -347,7 +347,7 @@ questions = [
         "effect": {
             "a": 0,
             "b": 0,
-            "c": -5,
+            "c": -10,
             "d": 0,
             "e": 0,
             "f": 0,
@@ -379,7 +379,7 @@ questions = [
         "effect": {
             "a": 0,
             "b": 0,
-            "c": 10,
+            "c": 5,
             "d": 0,
             "e": 0,
             "f": 0,
@@ -411,7 +411,7 @@ questions = [
         "effect": {
             "a": 0,
             "b": 0,
-            "c": -5,
+            "c": -10,
             "d": 0,
             "e": 0,
             "f": 0,
@@ -493,7 +493,7 @@ questions = [
             "a": 0,
             "b": 0,
             "c": 0,
-            "d": 5,
+            "d": 10,
             "e": 0,
             "f": 0,
             "g": 0
@@ -526,7 +526,7 @@ questions = [
             "b": 0,
             "c": 0,
             "d": 5,
-            "e": 0,
+            "e": 5,
             "f": 0,
             "g": 0
         }
@@ -655,9 +655,9 @@ questions = [
             "b": 0,
             "c": 0,
             "d": 0,
-			"e": 5,
-			"f": 0,
-			"g": 0
+            "e": 5,
+            "f": 0,
+            "g": 0
         }
     },
     {
@@ -671,7 +671,7 @@ questions = [
             "b": 0,
             "c": 0,
             "d": 0,
-            "e": -5,
+            "e": -10,
             "f": 0,
             "g": 0
         }
@@ -687,7 +687,7 @@ questions = [
             "b": 0,
             "c": 0,
             "d": 0,
-            "e": -10,
+            "e": -5,
             "f": 0,
             "g": 0
         }
@@ -898,7 +898,7 @@ questions = [
             "d": 0,
             "e": 0,
             "f": -5,
-            "g": 0
+            "g": -5
         }
     },
     {
@@ -946,7 +946,7 @@ questions = [
             "d": 0,
             "e": 0,
             "f": -5,
-            "g": 5
+            "g": 0
         }
     },
     {
@@ -976,25 +976,9 @@ questions = [
             "b": 0,
             "c": 0,
             "d": 0,
-			"e": 0,
-			"f": -10,
-			"g": 0
-        }
-    },
-    {
-        "question": "We must accept that the socialist states of the 20th century failed to seriously address environmental issues.",
-        "i18n": {
-            "de": "Wir müssen akzeptieren, dass die sozialistischen Staaten des 20. Jahrhunderts Umweltprobleme nicht ernsthaft angesprochen haben.",
-            "ru": "Мы должны признать, что социалистические государства 20-го века не смогли всерьёз заняться решением экологических проблем."
-        },
-        "effect": {
-            "a": 0,
-            "b": 0,
-            "c": 0,
-            "d": 0,
             "e": 0,
-            "f": -5,
-            "g": 0
+            "f": -10,
+            "g": 5
         }
     },
     //консерватизм против прогрессивизма
@@ -1027,7 +1011,7 @@ questions = [
             "d": 0,
             "e": 0,
             "f": 0,
-            "g": -5
+            "g": -10
         }
     },
     {
@@ -1043,7 +1027,7 @@ questions = [
             "d": 0,
             "e": 0,
             "f": 0,
-            "g": -5
+            "g": -10
         }
     },
     {
@@ -1059,7 +1043,7 @@ questions = [
             "d": 0,
             "e": 0,
             "f": 0,
-            "g": 10
+            "g": 5
         }
     },
     {
@@ -1075,7 +1059,7 @@ questions = [
             "d": 0,
             "e": 0,
             "f": 0,
-            "g": 5
+            "g": 10
         }
     },
     {
@@ -1088,7 +1072,7 @@ questions = [
             "a": 0,
             "b": 0,
             "c": 0,
-            "d": 0,
+            "d": 5,
             "e": 0,
             "f": 0,
             "g": -5
