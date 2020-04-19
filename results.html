@@ -75,9 +75,9 @@
 <dl id="next-matches"></dl>
 
 <h2>Мне не нравятся мои результаты!</h2>
-    <p>Пожалуйста, помните, что вы не намерены получить 100%-ый результат ни в одной из осей. Смысл викторины заключается в том, чтобы оспорить ваши взгляды. Если у вас какие-либо предложения или конструктивная критика, то не стесняйтесь писать мне в Discord (TESSERACT#5997).</p>
+    <p>Пожалуйста, помните, что вы не намерены получить 100%-ый результат ни в одной из осей. Смысл викторины заключается в том, чтобы оспорить ваши взгляды.</p>
 <hr/>
-<canvas id="banner" width=800 height=1000 style="font-family:Montserrat"></canvas>
+<canvas id="banner" width=800 height=1010 style="font-family:Montserrat"></canvas>
 <button class="button" onclick="location.href='index.html';" style="background-color: #2196f3;">На главную</button> <br>
 <!-- Privacy respecting Statcounter code for LeftValues http://leftvalues.github.io -->
 <script type="text/javascript">
@@ -241,7 +241,7 @@ document.getElementsByTagName("body")[0].appendChild(statcounterscript);
         var c = document.getElementById("banner")
         var ctx = c.getContext("2d")
         ctx.fillStyle = "#EEEEEE"
-        ctx.fillRect(0,0,800,1000)
+        ctx.fillRect(0,0,800,1010)
 
         img = document.getElementById("img-revolution")
         ctx.drawImage(img, 20, 170, 100, 100);
@@ -334,8 +334,8 @@ document.getElementsByTagName("body")[0].appendChild(statcounterscript);
 	if (progressive  > 30) {ctx.fillText(progressive + "%", 670, 957.5)}
 		
 	ctx.fillStyle="#222222"
-        ctx.font="300 30px Montserrat"
-        ctx.fillText("leftvalues.github.io", 780, 60)
+        ctx.font="300 26px Montserrat"
+        ctx.fillText("leftvalues-ru.github.io", 780, 60)
         ctx.textAlign="center"
         ctx.fillText("" + document.getElementById("a-label").innerHTML, 400, 175)
         ctx.fillText("" + document.getElementById("b-label").innerHTML, 400, 295)
