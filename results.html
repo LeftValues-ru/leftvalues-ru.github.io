@@ -116,13 +116,13 @@ document.getElementsByTagName("body")[0].appendChild(statcounterscript);
         }
     }
 	
-    result-a-label = ["Крайне Революционный","Очень Революционный","Революционный","Нейтральный","Реформистский","Очень Реформистский","Крайне Реформистский"]
-    result-b-label = ["Крайне Научный","Очень Научный","Научный","Нейтральный","Утопичный","Очень Утопичный","Крайне Утопичный"]
-    result-c-label = ["Крайне Централизованный","Очень Централизованный","Централизованный","Нейтральный","Децентрализованный","Очень Децентрализованный","Крайне Децентрализованный"]
-    result-d-label = ["Крайне Интернациональный","Очень Интернациональный","Интернациональный","Нейтральный","Национальный","Очень Национальный","Крайне Национальный"]
-    result-e-label = ["Крайне Партийный","Очень Партийный","Партийный","Нейтральный","Профсоюзный","Очень Профсоюзный","Крайне Профсоюзный"]
-    result-f-label = ["Крайне Производственный","Очень Производственный","Производственный","Нейтральный","Экологический","Очень Экологический","Крайне Экологический"]
-    result-g-label = ["Крайне Консервативный", "Очень Консервативный", "Консервативный", "Нейтральный", "Прогрессивный", "Очень Прогрессивный", "Крайне Прогрессивный"]
+    aArray = ["Крайне Революционный","Очень Революционный","Революционный","Нейтральный","Реформистский","Очень Реформистский","Крайне Реформистский"]
+    bArray = ["Крайне Научный","Очень Научный","Научный","Нейтральный","Утопичный","Очень Утопичный","Крайне Утопичный"]
+    cArray = ["Крайне Централизованный","Очень Централизованный","Централизованный","Нейтральный","Децентрализованный","Очень Децентрализованный","Крайне Децентрализованный"]
+    dArray = ["Крайне Интернациональный","Очень Интернациональный","Интернациональный","Нейтральный","Национальный","Очень Национальный","Крайне Национальный"]
+    eArray = ["Крайне Партийный","Очень Партийный","Партийный","Нейтральный","Профсоюзный","Очень Профсоюзный","Крайне Профсоюзный"]
+    fArray = ["Крайне Производственный","Очень Производственный","Производственный","Нейтральный","Экологический","Очень Экологический","Крайне Экологический"]
+    gArray = ["Крайне Консервативный", "Очень Консервативный", "Консервативный", "Нейтральный", "Прогрессивный", "Очень Прогрессивный", "Крайне Прогрессивный"]
 
     function setLabel(val,ary) {
         if (val > 100) { return "" } else
@@ -174,13 +174,13 @@ document.getElementsByTagName("body")[0].appendChild(statcounterscript);
     setBarValue("conservative", conservative)
     setBarValue("progressive", progressive)
 
-    document.getElementById("a-label").innerHTML = setLabel(revolution, result-a-label)
-    document.getElementById("b-label").innerHTML = setLabel(scientific, result-b-label)
-    document.getElementById("c-label").innerHTML = setLabel(central, result-c-label)
-    document.getElementById("d-label").innerHTML = setLabel(international, result-d-label)
-    document.getElementById("e-label").innerHTML = setLabel(party, result-e-label)
-    document.getElementById("f-label").innerHTML = setLabel(industry, result-f-label)
-    document.getElementById("g-label").innerHTML = setLabel(conservative, result-g-label)
+    document.getElementById("a-label").innerHTML = setLabel(revolution, aArray)
+    document.getElementById("b-label").innerHTML = setLabel(scientific, bArray)
+    document.getElementById("c-label").innerHTML = setLabel(central, cArray)
+    document.getElementById("d-label").innerHTML = setLabel(international, dArray)
+    document.getElementById("e-label").innerHTML = setLabel(party, eArray)
+    document.getElementById("f-label").innerHTML = setLabel(industry, fArray)
+    document.getElementById("g-label").innerHTML = setLabel(conservative, gArray)
 
     ideology = ""
     ideodesc = ""
