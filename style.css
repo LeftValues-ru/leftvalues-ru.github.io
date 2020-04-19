@@ -155,7 +155,7 @@ div.text-wrapper {
     display: inline-block;
 }
 div.revolution {
-    background-color: #890000;
+    background-color: #a10000;
     text-align: left;
     border-right-style: solid;
 }
@@ -165,7 +165,7 @@ div.reform {
     border-left-style: solid;
 }
 div.central {
-    background-color: #560000;
+    background-color: #6d0909;
     text-align: left;
     border-right-style: solid;
 }
@@ -175,7 +175,7 @@ div.decentral {
     border-left-style: solid;
 }
 div.utopian {
-    background-color: #7F0037;
+    background-color: #8f0641;
     text-align: right;
     border-left-style: solid;
 }
