@@ -13,17 +13,16 @@
         src="questions.js">
 </script>
 <h1>LeftValues</h1>
-<select id="langPicker"></select>
 <hr>
-<h2 data-i18n="quiz-loading" style="text-align:center;" id="question-number">Загрузка...</h2>
+<h2 style="text-align:center;" id="question-number">Загрузка...</h2>
 <p class="question" id="question-text"></p>
-<button data-i18n="quiz-strongly-agree" class="button" onclick="next_question( 1.0)" style="background-color: #1b5e20;">Полностью согласен</button> <br>
-<button data-i18n="quiz-agree" class="button" onclick="next_question( 0.5)" style="background-color: #4caf50;">Согласен</button> <br>
-<button data-i18n="quiz-neutral" class="button" onclick="next_question( 0.0)" style="background-color: #bbbbbb;">Не знаю/Не уверен</button> <br>
-<button data-i18n="quiz-disagree" class="button" onclick="next_question(-0.5)" style="background-color: #f44336;">Скорее не согласен</button> <br>
-<button data-i18n="quiz-strongly-disagree" class="button" onclick="next_question(-1.0)" style="background-color: #b71c1c;">Полностью не согалсен</button> <br>
-<button data-i18n="quiz-back" class="small_button" onclick="prev_question()" id="back_button">Предыдущий вопрос</button>
-<button data-i18n="quiz-back" class="small_button_off" id="back_button_off">Предыдущий вопрос</button>
+<button class="button" onclick="next_question( 1.0)" style="background-color: #1b5e20;">Полностью согласен</button> <br>
+<button class="button" onclick="next_question( 0.5)" style="background-color: #4caf50;">Согласен</button> <br>
+<button class="button" onclick="next_question( 0.0)" style="background-color: #bbbbbb;">Не знаю/Не уверен</button> <br>
+<button class="button" onclick="next_question(-0.5)" style="background-color: #f44336;">Скорее не согласен</button> <br>
+<button class="button" onclick="next_question(-1.0)" style="background-color: #b71c1c;">Полностью не согалсен</button> <br>
+<button class="small_button" onclick="prev_question()" id="back_button">Предыдущий вопрос</button>
+<button class="small_button_off" id="back_button_off">Предыдущий вопрос</button>
 <br>
 
 <!-- Privacy respecting Statcounter code for LeftValues http://leftvalues.github.io -->
@@ -56,19 +55,19 @@ document.getElementsByTagName("body")[0].appendChild(statcounterscript);
         max_b += Math.abs(questions[i].effect.b)
         max_c += Math.abs(questions[i].effect.c)
         max_d += Math.abs(questions[i].effect.d)
-		max_e += Math.abs(questions[i].effect.e)
-		max_f += Math.abs(questions[i].effect.f)
-		max_g += Math.abs(questions[i].effect.g)
+        max_e += Math.abs(questions[i].effect.e)
+        max_f += Math.abs(questions[i].effect.f)
+        max_g += Math.abs(questions[i].effect.g)
     }
     function init_question() {
-        document.getElementById("question-text").innerHTML = (userLang in questions[qn].i18n) ? questions[qn].i18n[userLang] : questions[qn].question
-        document.getElementById("question-number").innerHTML = i18n.getString("quiz-question-of", [qn, questions])
+        document.getElementById("question-text").innerHTML = questions[qn].question;
+        document.getElementById("question-number").innerHTML = "Вопрос " + (qn + 1) + " из " + (questions.length);
         if (prev_answer == null) {
-            document.getElementById("back_button").style.display = 'none'
-            document.getElementById("back_button_off").style.display = 'block'
+            document.getElementById("back_button").style.display = 'none';
+            document.getElementById("back_button_off").style.display = 'block';
         } else {
-            document.getElementById("back_button").style.display = 'block'
-            document.getElementById("back_button_off").style.display = 'none'
+            document.getElementById("back_button").style.display = 'block';
+            document.getElementById("back_button_off").style.display = 'none';
         }
 
     }
@@ -78,9 +77,9 @@ document.getElementsByTagName("body")[0].appendChild(statcounterscript);
         b += mult*questions[qn].effect.b
         c += mult*questions[qn].effect.c
         d += mult*questions[qn].effect.d
-		e += mult*questions[qn].effect.e
-		f += mult*questions[qn].effect.f
-		g += mult*questions[qn].effect.g
+        e += mult*questions[qn].effect.e
+        f += mult*questions[qn].effect.f
+        g += mult*questions[qn].effect.g
         qn++
         prev_answer = mult
         if (qn < questions.length) {
@@ -98,9 +97,9 @@ document.getElementsByTagName("body")[0].appendChild(statcounterscript);
         b -= prev_answer * questions[qn].effect.b
         c -= prev_answer * questions[qn].effect.c
         d -= prev_answer * questions[qn].effect.d
-		e -= prev_answer * questions[qn].effect.e
-		f -= prev_answer * questions[qn].effect.f
-		g -= prev_answer * questions[qn].effect.g
+        e -= prev_answer * questions[qn].effect.e
+        f -= prev_answer * questions[qn].effect.f
+        g -= prev_answer * questions[qn].effect.g
         prev_answer = null
         init_question()
 
@@ -114,9 +113,9 @@ document.getElementsByTagName("body")[0].appendChild(statcounterscript);
             + `&b=${calc_score(b,max_b)}`
             + `&c=${calc_score(c,max_c)}`
             + `&d=${calc_score(d,max_d)}`
-			+ `&e=${calc_score(e,max_e)}`
-			+ `&f=${calc_score(f,max_f)}`
-			+ `&g=${calc_score(g,max_g)}`
+            + `&e=${calc_score(e,max_e)}`
+            + `&f=${calc_score(f,max_f)}`
+            + `&g=${calc_score(g,max_g)}`
     }
 </script>
 </body>
