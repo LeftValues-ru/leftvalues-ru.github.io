@@ -137,11 +137,11 @@ document.getElementsByTagName("body")[0].appendChild(statcounterscript);
     }
 
     function getIdeologyNameByIndex(i) {
-        return (ideologies[qn].ideology) ? ideologies[qn].name : ideologies[qn].name;
+        return (ideologies[i].ideology) ? ideologies[i].name : ideologies[i].name;
     }
 
     function getIdeologyDescriptionByIndex(i) {
-        return (ideologies[qn].ideology) ? ideologies[qn].desc : ideologies[qn].desc;
+        return (ideologies[i].ideology) ? ideologies[i].desc : ideologies[i].desc;
     }
 
     revolution     = getQueryVariable("a")
