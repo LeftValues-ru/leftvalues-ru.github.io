@@ -94,7 +94,6 @@ document.getElementsByTagName("body")[0].appendChild(statcounterscript);
 </script>
 <!-- End of Statcounter Code -->
 <!-- JavaScript for the test itself -->
-<script type="application/javascript" src="i18n.js"></script>
 <script>
     function getQueryVariable(variable)
     {
@@ -116,6 +115,14 @@ document.getElementsByTagName("body")[0].appendChild(statcounterscript);
             innerel.style.visibility = "hidden"
         }
     }
+	
+    result-a-label = ["Крайне Революционный","Очень Революционный","Революционный","Нейтральный","Реформистский","Очень Реформистский","Крайне Реформистский"]
+    result-b-label = ["Крайне Научный","Очень Научный","Научный","Нейтральный","Утопичный","Очень Утопичный","Крайне Утопичный"]
+    result-c-label = ["Крайне Централизованный","Очень Централизованный","Централизованный","Нейтральный","Децентрализованный","Очень Децентрализованный","Крайне Децентрализованный"]
+    result-d-label = ["Крайне Интернациональный","Очень Интернациональный","Интернациональный","Нейтральный","Национальный","Очень Национальный","Крайне Национальный"]
+    result-e-label = ["Крайне Партийный","Очень Партийный","Партийный","Нейтральный","Профсоюзный","Очень Профсоюзный","Крайне Профсоюзный"]
+    result-f-label = ["Крайне Производственный","Очень Производственный","Производственный","Нейтральный","Экологический","Очень Экологический","Крайне Экологический"]
+    result-g-label = ["Крайне Консервативный", "Очень Консервативный", "Консервативный", "Нейтральный", "Прогрессивный", "Очень Прогрессивный", "Крайне Прогрессивный"]
 
     function setLabel(val,ary) {
         if (val > 100) { return "" } else
@@ -130,27 +137,27 @@ document.getElementsByTagName("body")[0].appendChild(statcounterscript);
     }
 
     function getIdeologyNameByIndex(i) {
-        return (userLang in ideologies[i].i18n) ? ideologies[i].i18n[userLang].name : ideologies[i].name;
+        return (ideologies[qn].ideology) ? ideologies[qn].name : ideologies[qn].name;
     }
 
     function getIdeologyDescriptionByIndex(i) {
-        return (userLang in ideologies[i].i18n) ? ideologies[i].i18n[userLang].desc : ideologies[i].desc;
+        return (ideologies[qn].ideology) ? ideologies[qn].desc : ideologies[qn].desc;
     }
 
-    revolution  = getQueryVariable("a")
-    scientific  = getQueryVariable("b")
-    central   = getQueryVariable("c")
+    revolution     = getQueryVariable("a")
+    scientific     = getQueryVariable("b")
+    central        = getQueryVariable("c")
     international  = getQueryVariable("d")
-	party  = getQueryVariable("e")
-	industry  = getQueryVariable("f")
-	conservative  = getQueryVariable("g")
-    reform    = (100 - revolution).toFixed(1)
-    utopian     = (100 - scientific   ).toFixed(1)
-    decentral = (100 - central ).toFixed(1)
-    national = (100 - international).toFixed(1)
-	union = (100 - party).toFixed(1)
-	ecology = (100 - industry).toFixed(1)
-	progressive = (100 - conservative).toFixed(1)
+    party          = getQueryVariable("e")
+    industry       = getQueryVariable("f")
+    conservative   = getQueryVariable("g")
+    reform         = (100 - revolution   ).toFixed(1)
+    utopian        = (100 - scientific   ).toFixed(1)
+    decentral      = (100 - central      ).toFixed(1)
+    national       = (100 - international).toFixed(1)
+    union          = (100 - party        ).toFixed(1)
+    ecology        = (100 - industry     ).toFixed(1)
+    progressive    = (100 - conservative ).toFixed(1)
 
     setBarValue("revolution", revolution)
     setBarValue("reform", reform)
@@ -160,23 +167,23 @@ document.getElementsByTagName("body")[0].appendChild(statcounterscript);
     setBarValue("decentral", decentral)
     setBarValue("national", national)
     setBarValue("international", international)
-	setBarValue("party", party)
+    setBarValue("party", party)
     setBarValue("union", union)
-	setBarValue("industry", industry)
+    setBarValue("industry", industry)
     setBarValue("ecology", ecology)
-	setBarValue("conservative", conservative)
+    setBarValue("conservative", conservative)
     setBarValue("progressive", progressive)
 
-    document.getElementById("a-label").innerHTML = setLabel(revolution, i18n.getString("result-a-label"))
-    document.getElementById("b-label").innerHTML = setLabel(scientific, i18n.getString("result-b-label"))
-    document.getElementById("c-label").innerHTML = setLabel(central, i18n.getString("result-c-label"))
-    document.getElementById("d-label").innerHTML = setLabel(international, i18n.getString("result-d-label"))
-	document.getElementById("e-label").innerHTML = setLabel(party, i18n.getString("result-e-label"))
-	document.getElementById("f-label").innerHTML = setLabel(industry, i18n.getString("result-f-label"))
-	document.getElementById("g-label").innerHTML = setLabel(conservative, i18n.getString("result-g-label"))
+    document.getElementById("a-label").innerHTML = setLabel(revolution, result-a-label)
+    document.getElementById("b-label").innerHTML = setLabel(scientific, result-b-label)
+    document.getElementById("c-label").innerHTML = setLabel(central, result-c-label)
+    document.getElementById("d-label").innerHTML = setLabel(international, result-d-label)
+    document.getElementById("e-label").innerHTML = setLabel(party, result-e-label)
+    document.getElementById("f-label").innerHTML = setLabel(industry, result-f-label)
+    document.getElementById("g-label").innerHTML = setLabel(conservative, result-g-label)
 
     ideology = ""
-	ideodesc = ""
+    ideodesc = ""
     ideodist = Infinity
     ideologyToDistance = {};
     sortedIdeologies = [];
@@ -187,9 +194,9 @@ document.getElementsByTagName("body")[0].appendChild(statcounterscript);
         dist += Math.pow(Math.abs(ideologies[i].stats.c - central), 2)
         dist += Math.pow(Math.abs(ideologies[i].stats.b - scientific), 2)
         dist += Math.pow(Math.abs(ideologies[i].stats.d - international), 2)
-		dist += Math.pow(Math.abs(ideologies[i].stats.e - party), 2)
-		dist += Math.pow(Math.abs(ideologies[i].stats.f - industry), 2)
-		dist += Math.pow(Math.abs(ideologies[i].stats.g - conservative), 2)
+	dist += Math.pow(Math.abs(ideologies[i].stats.e - party), 2)
+	dist += Math.pow(Math.abs(ideologies[i].stats.f - industry), 2)
+	dist += Math.pow(Math.abs(ideologies[i].stats.g - conservative), 2)
 
         ideologyToDistance[ideologies[i].name] = dist;
         ideologyIndexAndDistance.push({index: i, distance: dist});
@@ -252,15 +259,15 @@ document.getElementsByTagName("body")[0].appendChild(statcounterscript);
         ctx.drawImage(img, 20, 530, 100, 100)
         img = document.getElementById("img-national")
         ctx.drawImage(img, 680, 530, 100, 100)
-		img = document.getElementById("img-party")
+	img = document.getElementById("img-party")
         ctx.drawImage(img, 20, 650, 100, 100)
         img = document.getElementById("img-union")
         ctx.drawImage(img, 680, 650, 100, 100)
-		img = document.getElementById("img-industry")
+	img = document.getElementById("img-industry")
         ctx.drawImage(img, 20, 770, 100, 100)
         img = document.getElementById("img-ecology")
         ctx.drawImage(img, 680, 770, 100, 100)
-		img = document.getElementById("img-conservative")
+	img = document.getElementById("img-conservative")
         ctx.drawImage(img, 20, 890, 100, 100)
         img = document.getElementById("img-progressive")
         ctx.drawImage(img, 680, 890, 100, 100)
@@ -270,9 +277,9 @@ document.getElementsByTagName("body")[0].appendChild(statcounterscript);
         ctx.fillRect(120, 300, 560, 80)
         ctx.fillRect(120, 420, 560, 80)
         ctx.fillRect(120, 540, 560, 80)
-		ctx.fillRect(120, 660, 560, 80)
-		ctx.fillRect(120, 780, 560, 80)
-		ctx.fillRect(120, 900, 560, 80)
+	ctx.fillRect(120, 660, 560, 80)
+	ctx.fillRect(120, 780, 560, 80)
+	ctx.fillRect(120, 900, 560, 80)
         ctx.fillStyle="#890000"
         ctx.fillRect(120, 184, 5.6*revolution-2, 72)
         ctx.fillStyle="#FC5959"
@@ -289,15 +296,15 @@ document.getElementsByTagName("body")[0].appendChild(statcounterscript);
         ctx.fillRect(120, 544, 5.6*international-2, 72)
         ctx.fillStyle="#7F3300"
         ctx.fillRect(682-5.6*national, 544, 5.6*national-2, 72)
-		ctx.fillStyle="#963B33"
+	ctx.fillStyle="#963B33"
         ctx.fillRect(120, 664, 5.6*party-2, 72)
         ctx.fillStyle="#7F333B"
         ctx.fillRect(682-5.6*union, 664, 5.6*union-2, 72)
-		ctx.fillStyle="#804E00"
+	ctx.fillStyle="#804E00"
         ctx.fillRect(120, 784, 5.6*industry-2, 72)
         ctx.fillStyle="#76890B"
         ctx.fillRect(682-5.6*ecology, 784, 5.6*ecology-2, 72)
-		ctx.fillStyle="#27577A"
+	ctx.fillStyle="#27577A"
         ctx.fillRect(120, 904, 5.6*conservative-2, 72)
         ctx.fillStyle="#C4A717"
         ctx.fillRect(682-5.6*progressive, 904, 5.6*progressive-2, 72)
@@ -308,25 +315,25 @@ document.getElementsByTagName("body")[0].appendChild(statcounterscript);
         ctx.font="50px Montserrat"
         ctx.fillText(getIdeologyNameByIndex(closestMatch.index), 20, 140)
 
-		ctx.fillStyle="#dddddd"
+	ctx.fillStyle="#dddddd"
         ctx.textAlign="left"
         if (revolution  > 30) {ctx.fillText(revolution + "%", 130, 237.5)}
         if (scientific     > 30) {ctx.fillText(scientific + "%", 130, 357.5)}
         if (central   > 30) {ctx.fillText(central + "%", 130, 477.5)}
         if (international > 30) {ctx.fillText(international + "%", 130, 597.5)}
-		if (party > 30) {ctx.fillText(party + "%", 130, 717.5)}
-		if (industry > 30) {ctx.fillText(industry + "%", 130, 837.5)}
-		if (conservative > 30) {ctx.fillText(conservative + "%", 130, 957.5)}
+	if (party > 30) {ctx.fillText(party + "%", 130, 717.5)}
+	if (industry > 30) {ctx.fillText(industry + "%", 130, 837.5)}
+	if (conservative > 30) {ctx.fillText(conservative + "%", 130, 957.5)}
         ctx.textAlign="right"
         if (reform    > 30) {ctx.fillText(reform + "%", 670, 237.5)}
         if (utopian     > 30) {ctx.fillText(utopian + "%", 670, 357.5)}
         if (decentral > 30) {ctx.fillText(decentral + "%", 670, 477.5)}
         if (national  > 30) {ctx.fillText(national + "%", 670, 597.5)}
-		if (union  > 30) {ctx.fillText(union + "%", 670, 717.5)}
-		if (ecology  > 30) {ctx.fillText(ecology + "%", 670, 837.5)}
-		if (progressive  > 30) {ctx.fillText(progressive + "%", 670, 957.5)}
+	if (union  > 30) {ctx.fillText(union + "%", 670, 717.5)}
+	if (ecology  > 30) {ctx.fillText(ecology + "%", 670, 837.5)}
+	if (progressive  > 30) {ctx.fillText(progressive + "%", 670, 957.5)}
 		
-		ctx.fillStyle="#222222"
+	ctx.fillStyle="#222222"
         ctx.font="300 30px Montserrat"
         ctx.fillText("leftvalues.github.io", 780, 60)
         ctx.textAlign="center"
@@ -334,9 +341,9 @@ document.getElementsByTagName("body")[0].appendChild(statcounterscript);
         ctx.fillText("" + document.getElementById("b-label").innerHTML, 400, 295)
         ctx.fillText("" + document.getElementById("c-label").innerHTML, 400, 415)
         ctx.fillText("" + document.getElementById("d-label").innerHTML, 400, 535)
-		ctx.fillText("" + document.getElementById("e-label").innerHTML, 400, 655)
-		ctx.fillText("" + document.getElementById("f-label").innerHTML, 400, 775)
-		ctx.fillText("" + document.getElementById("g-label").innerHTML, 400, 895)
+	ctx.fillText("" + document.getElementById("e-label").innerHTML, 400, 655)
+	ctx.fillText("" + document.getElementById("f-label").innerHTML, 400, 775)
+	ctx.fillText("" + document.getElementById("g-label").innerHTML, 400, 895)
     }
     </script>
 </body>
