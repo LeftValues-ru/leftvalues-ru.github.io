@@ -94,7 +94,7 @@ img.center {
     border-radius: 8pt;
     color: white;
     padding: 8pt;
-    width: 50%;
+    width: 60%;
     min-width: 500pt;
     text-align: center;
     text-decoration: none;
@@ -110,7 +110,7 @@ img.center {
     border-radius: 8pt;
     color: white;
     padding: 8pt;
-    width: 10%;
+    width: 35%;
     min-width: 100pt;
     text-align: center;
     text-decoration: none;
@@ -118,13 +118,6 @@ img.center {
     font-size: 18pt;
     margin: -2px auto;
     cursor: pointer;
-}
-.small_button_off {
-    background-color: #ddd;
-    color: #888;
-    border: 2px solid #888;
-    cursor: not-allowed;
-    margin: -4px auto;
 }
 div.axis {
     width: 100%;
