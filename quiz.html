@@ -16,13 +16,12 @@
 <hr>
 <h2 style="text-align:center;" id="question-number">Загрузка...</h2>
 <p class="question" id="question-text"></p>
-<button class="button" onclick="next_question( 1.0)" style="background-color: #1b5e20;">Полностью согласен</button> <br>
-<button class="button" onclick="next_question( 0.5)" style="background-color: #4caf50;">Согласен</button> <br>
-<button class="button" onclick="next_question( 0.0)" style="background-color: #bbbbbb;">Не знаю/Не уверен</button> <br>
-<button class="button" onclick="next_question(-0.5)" style="background-color: #f44336;">Скорее не согласен</button> <br>
-<button class="button" onclick="next_question(-1.0)" style="background-color: #b71c1c;">Полностью не согалсен</button> <br>
+<button class="button" onclick="next_question(1)" style="background-color: #1b5e20;">Полностью согласен</button> <br>
+<button class="button" onclick="next_question(2/3)" style="background-color: #4caf50;">Согласен</button> <br>
+<button class="button" onclick="next_question(0)" style="background-color: #bbbbbb;">Не знаю/Не уверен</button> <br>
+<button class="button" onclick="next_question(-2/3)" style="background-color: #f44336;">Скорее не согласен</button> <br>
+<button class="button" onclick="next_question(-1)" style="background-color: #b71c1c;">Полностью не согалсен</button> <br>
 <button class="small_button" onclick="prev_question()" id="back_button">Предыдущий вопрос</button>
-<button class="small_button_off" id="back_button_off">Предыдущий вопрос</button>
 <br>
 
 <!-- Privacy respecting Statcounter code for LeftValues http://leftvalues.github.io -->
@@ -88,20 +87,14 @@ document.getElementsByTagName("body")[0].appendChild(statcounterscript);
             results()
         }
     }
-    function prev_question() {
-        if (prev_answer == null) {
-            return
-        }
-        qn--
-        a -= prev_answer * questions[qn].effect.a
-        b -= prev_answer * questions[qn].effect.b
-        c -= prev_answer * questions[qn].effect.c
-        d -= prev_answer * questions[qn].effect.d
-        e -= prev_answer * questions[qn].effect.e
-        f -= prev_answer * questions[qn].effect.f
-        g -= prev_answer * questions[qn].effect.g
-        prev_answer = null
-        init_question()
+    function prev_question()
+    {
+	if (qn == 0)
+	{
+		return;
+	}
+	qn--;
+	init_question();
 
     }
     function calc_score(score,max) {
