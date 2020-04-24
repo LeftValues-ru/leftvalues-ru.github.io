@@ -61,7 +61,7 @@ document.getElementsByTagName("body")[0].appendChild(statcounterscript);
     function init_question() {
         document.getElementById("question-text").innerHTML = questions[qn].question;
         document.getElementById("question-number").innerHTML = "Вопрос " + (qn + 1) + " из " + (questions.length);
-        if (prev_answer == null) {
+        if (qn == 0) {
             document.getElementById("back_button").style.display = 'none';
             document.getElementById("back_button_off").style.display = 'block';
         } else {
