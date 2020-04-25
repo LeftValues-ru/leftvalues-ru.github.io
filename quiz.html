@@ -22,6 +22,8 @@
 <button class="button" onclick="next_question(-0.5)" style="background-color: #f44336;">Скорее не согласен</button> <br>
 <button class="button" onclick="next_question(-1.0)" style="background-color: #b71c1c;">Полностью не согалсен</button> <br>
 <button class="small_button" onclick="prev_question()" id="back_button">Предыдущий вопрос</button>
+<button class="small_button_off" id="back_button_off">Предыдущий вопрос</button><br><br>
+<button class="small_button" onclick="location.href='index.html';" style="background-color: #2196f3;">На главную</button><br>
 <br>
 
 <!-- Privacy respecting Statcounter code for LeftValues http://leftvalues.github.io -->
@@ -61,7 +63,7 @@ document.getElementsByTagName("body")[0].appendChild(statcounterscript);
     function init_question() {
         document.getElementById("question-text").innerHTML = questions[qn].question;
         document.getElementById("question-number").innerHTML = "Вопрос " + (qn + 1) + " из " + (questions.length);
-        if (qn == 0) {
+        if (prev_answer == null) {
             document.getElementById("back_button").style.display = 'none';
             document.getElementById("back_button_off").style.display = 'block';
         } else {
